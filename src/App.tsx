@@ -4,35 +4,52 @@ import {
   Route,
   Link,
   Navigate,
+  useNavigate,
+  useLocation,
 } from "react-router-dom";
 import UseActionStatePage from "./hooks-examples/useActionState";
+import { useEffect, useState } from "react";
+import "./App.css";
 
-// Kasnije možemo ovo izvući u poseban fajl (npr. navigationData.ts)
-const HOOKS_LIST = [
-  { id: "useActionState", name: "useActionState" },
-  // Ovdje ćemo dodavati ostale hookove...
-];
+const HOOKS_LIST = [{ id: "useActionState", name: "useActionState" }];
+
+function Navigation() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [selectedHook, setSelectedHook] = useState(location.pathname);
+
+  useEffect(() => {
+    setSelectedHook(location.pathname);
+  }, [location]);
+
+  return (
+    <header className="main-header">
+      <Link to="/" className="logo-link">
+        <h1>React Hooks Masterclass</h1>
+      </Link>
+      <nav>
+        <select
+          value={selectedHook}
+          onChange={(e) => navigate(e.target.value)}
+          className="hook-select"
+        >
+          <option value="/">Izaberi hook...</option>
+          {HOOKS_LIST.map((hook) => (
+            <option key={hook.id} value={`/${hook.id}`}>
+              {hook.name}
+            </option>
+          ))}
+        </select>
+      </nav>
+    </header>
+  );
+}
 
 function App() {
   return (
     <Router>
       <div className="app-container">
-        <header className="main-header">
-          <h1>React Hooks Masterclass</h1>
-          <nav>
-            <select
-              onChange={(e) => (window.location.href = e.target.value)}
-              className="hook-select"
-            >
-              <option value="/">Izaberi hook...</option>
-              {HOOKS_LIST.map((hook) => (
-                <option key={hook.id} value={`/${hook.id}`}>
-                  {hook.name}
-                </option>
-              ))}
-            </select>
-          </nav>
-        </header>
+        <Navigation />
 
         <main className="content">
           <Routes>

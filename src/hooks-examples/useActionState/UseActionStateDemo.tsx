@@ -1,10 +1,8 @@
 import { useActionState } from "react";
 
-// Simulacija API poziva na serveru
 async function addToNewsletterAction(prevState: any, formData: FormData) {
   const email = formData.get("email");
 
-  // Simuliramo kašnjenje mreže
   await new Promise((res) => setTimeout(res, 1000));
 
   if (email === "error@test.com") {
@@ -19,7 +17,6 @@ async function addToNewsletterAction(prevState: any, formData: FormData) {
 }
 
 const UseActionStateDemo = () => {
-  // Prvi argument je funkcija, drugi je inicijalno stanje
   const [state, formAction, isPending] = useActionState(addToNewsletterAction, {
     error: null,
     success: false,
