@@ -180,3 +180,30 @@
   margin-top: 1.5rem;
   font-size: 0.9rem;
 }
+
+.testing-box {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(56, 189, 248, 0.05);
+  border-radius: 12px;
+  border: 1px dashed var(--accent-color);
+  font-size: 0.9rem;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testing-box strong {
+  color: var(--accent-color);
+  margin-right: 8px;
+}
+
+.testing-box.error-variant {
+  background: rgba(248, 113, 113, 0.05);
+  border-color: #f87171;
+}
+
+.testing-box.error-variant strong {
+  color: #f87171;
+}
