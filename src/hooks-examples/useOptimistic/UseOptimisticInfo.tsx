@@ -1,7 +1,14 @@
 const UseOptimisticInfo = () => {
   return (
     <section className="hook-info">
-      <h2>useOptimistic</h2>
+      <a
+        href="https://react.dev/reference/react/useOptimistic"
+        target="_blank"
+        rel="noreferrer"
+        className="hook-title-link"
+      >
+        <h2>useOptimistic</h2>
+      </a>
       <p>
         <strong>useOptimistic</strong> je React 19 hook dizajniran za
         poboljšanje percipiranih performansi aplikacije. On omogućava trenutni
