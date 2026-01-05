@@ -1,6 +1,6 @@
 import { useActionState } from "react";
 
-async function addToNewsletterAction(prevState: any, formData: FormData) {
+async function addToNewsletterAction(_prevState: any, formData: FormData) {
   const email = formData.get("email");
 
   await new Promise((res) => setTimeout(res, 1000));
