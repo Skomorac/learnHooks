@@ -6,9 +6,11 @@
 
 .main-header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 2rem 0;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 3rem 0;
   border-bottom: 1px solid var(--border-color);
   margin-bottom: 3rem;
   position: sticky;
@@ -19,11 +21,20 @@
 }
 
 .main-header h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 0;
   background: linear-gradient(90deg, #38bdf8, #818cf8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-link:hover h1 {
+  filter: brightness(1.2);
 }
 
 .hook-select {
@@ -41,9 +52,11 @@
   border-color: var(--accent-color);
 }
 
-/* Stilovi za pojedinačnu stranicu hook-a */
 .hook-page {
   animation: fadeIn 0.4s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @keyframes fadeIn {
@@ -57,8 +70,15 @@
   }
 }
 
+.home-hero {
+  text-align: center;
+  padding: 4rem 0;
+}
+
 .hook-info {
-  margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  width: 100%;
 }
 
 .key-points {
@@ -66,22 +86,36 @@
   border-left: 4px solid var(--accent-color);
   padding: 1rem 1.5rem;
   border-radius: 4px 12px 12px 4px;
-  margin: 1.5rem 0;
+  margin: 2rem auto;
+  text-align: left;
+  max-width: 600px;
 }
 
 .hook-demo {
   background: var(--card-bg);
-  padding: 2rem;
+  padding: 2.5rem;
   border-radius: 16px;
   border: 1px solid var(--border-color);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-/* Stilovi za formu unutar demo dijela */
+.hook-demo h3 {
+  margin-top: 0;
+}
+
 .hook-demo form {
   display: flex;
   gap: 10px;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 500px;
+  justify-content: center;
 }
 
 .hook-demo input {
@@ -113,14 +147,18 @@
   cursor: not-allowed;
 }
 
-/* Kodni blok podsjetnik */
 .code-reminder {
-  margin-top: 3rem;
+  margin-top: 4rem;
   background: #000;
-  padding: 1.5rem;
+  padding: 2rem;
   border-radius: 12px;
-  position: relative;
-  overflow: hidden;
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+}
+
+.code-reminder h4 {
+  margin-top: 0;
 }
 
 .code-reminder pre {
@@ -128,15 +166,17 @@
   font-family: "Fira Code", monospace;
   color: #a5f3fc;
   font-size: 0.9rem;
+  overflow-x: auto;
 }
 
 .success-msg {
   color: #4ade80;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-size: 0.9rem;
 }
+
 .error-msg {
   color: #f87171;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-size: 0.9rem;
 }
