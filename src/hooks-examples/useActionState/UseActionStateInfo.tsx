@@ -1,7 +1,14 @@
 const UseActionStateInfo = () => {
   return (
     <section className="hook-info">
-      <h2>useActionState</h2>
+      <a
+        href="https://react.dev/reference/react/useActionState"
+        target="_blank"
+        rel="noreferrer"
+        className="hook-title-link"
+      >
+        <h2>useActionState</h2>
+      </a>
       <p>
         <strong>useActionState</strong> je React 19 hook koji ti omogućava da
         upravljaš stanjem na osnovu rezultata neke "akcije" (obično form
