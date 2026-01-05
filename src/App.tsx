@@ -9,12 +9,14 @@ import {
 } from "react-router-dom";
 import UseActionStatePage from "./hooks-examples/useActionState";
 import UseOptimisticPage from "./hooks-examples/useOptimistic";
+import UseCallbackPage from "./hooks-examples/useCallback";
 import { useEffect, useState } from "react";
 import "./App.css";
 
 const HOOKS_LIST = [
   { id: "useActionState", name: "useActionState" },
   { id: "useOptimistic", name: "useOptimistic" },
+  { id: "useCallback", name: "useCallback" },
 ];
 
 function Navigation() {
@@ -60,6 +62,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/useActionState" element={<UseActionStatePage />} />
             <Route path="/useOptimistic" element={<UseOptimisticPage />} />
+            <Route path="/useCallback" element={<UseCallbackPage />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </main>

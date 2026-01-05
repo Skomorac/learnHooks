@@ -251,3 +251,20 @@
 .testing-box.error-variant strong {
   color: #f87171;
 }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+    background: #ef4444;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.render-badge {
+  animation: pulse 0.4s ease-in-out;
+}
