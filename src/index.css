@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+:root {
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: dark;
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --accent-color: #38bdf8;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: block; /* Vratili na block da bi header bio na vrhu */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
