@@ -11,6 +11,7 @@ import UseActionStatePage from "./hooks-examples/useActionState";
 import UseOptimisticPage from "./hooks-examples/useOptimistic";
 import UseCallbackPage from "./hooks-examples/useCallback";
 import UseContextPage from "./hooks-examples/useContext";
+import UseDebugValuePage from "./hooks-examples/useDebugValue";
 import { useEffect, useState } from "react";
 import "./App.css";
 
@@ -19,6 +20,7 @@ const HOOKS_LIST = [
   { id: "useOptimistic", name: "useOptimistic" },
   { id: "useCallback", name: "useCallback" },
   { id: "useContext", name: "useContext" },
+  { id: "useDebugValue", name: "useDebugValue" },
 ];
 
 function Navigation() {
@@ -66,6 +68,7 @@ function App() {
             <Route path="/useOptimistic" element={<UseOptimisticPage />} />
             <Route path="/useCallback" element={<UseCallbackPage />} />
             <Route path="/useContext" element={<UseContextPage />} />
+            <Route path="/useDebugValue" element={<UseDebugValuePage />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </main>
