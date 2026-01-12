@@ -8,39 +8,41 @@ import {
   useLocation,
 } from "react-router-dom";
 import UseActionStatePage from "./hooks-examples/useActionState";
-import UseOptimisticPage from "./hooks-examples/useOptimistic";
 import UseCallbackPage from "./hooks-examples/useCallback";
 import UseContextPage from "./hooks-examples/useContext";
 import UseDebugValuePage from "./hooks-examples/useDebugValue";
 import UseDeferredValuePage from "./hooks-examples/useDeferredValue";
-import UseTransitionPage from "./hooks-examples/useTransition";
 import UseEffectPage from "./hooks-examples/useEffect";
 import UseIdPage from "./hooks-examples/useId";
 import UseImperativeHandlePage from "./hooks-examples/useImperativeHandle";
 import UseLayoutEffectPage from "./hooks-examples/useLayoutEffect";
 import UseMemoPage from "./hooks-examples/useMemo";
+import UseOptimisticPage from "./hooks-examples/useOptimistic";
 import UseReducerPage from "./hooks-examples/useReducer";
 import UseRefPage from "./hooks-examples/useRef";
 import UseStatePage from "./hooks-examples/useState";
+import UseSyncExternalStorePage from "./hooks-examples/useSyncExternalStore";
+import UseTransitionPage from "./hooks-examples/useTransition";
 import { useEffect, useState } from "react";
 import "./App.css";
 
 const HOOKS_LIST = [
   { id: "useActionState", name: "useActionState" },
-  { id: "useOptimistic", name: "useOptimistic" },
   { id: "useCallback", name: "useCallback" },
   { id: "useContext", name: "useContext" },
   { id: "useDebugValue", name: "useDebugValue" },
   { id: "useDeferredValue", name: "useDeferredValue" },
-  { id: "useTransition", name: "useTransition" },
   { id: "useEffect", name: "useEffect" },
   { id: "useId", name: "useId" },
   { id: "useImperativeHandle", name: "useImperativeHandle" },
   { id: "useLayoutEffect", name: "useLayoutEffect" },
   { id: "useMemo", name: "useMemo" },
+  { id: "useOptimistic", name: "useOptimistic" },
   { id: "useReducer", name: "useReducer" },
   { id: "useRef", name: "useRef" },
   { id: "useState", name: "useState" },
+  { id: "useSyncExternalStore", name: "useSyncExternalStore" },
+  { id: "useTransition", name: "useTransition" },
 ];
 
 function Navigation() {
@@ -85,26 +87,30 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/useActionState" element={<UseActionStatePage />} />
-            <Route path="/useOptimistic" element={<UseOptimisticPage />} />
             <Route path="/useCallback" element={<UseCallbackPage />} />
             <Route path="/useContext" element={<UseContextPage />} />
             <Route path="/useDebugValue" element={<UseDebugValuePage />} />
-            <Route path="/useTransition" element={<UseTransitionPage />} />
+            <Route
+              path="/useDeferredValue"
+              element={<UseDeferredValuePage />}
+            />
             <Route path="/useEffect" element={<UseEffectPage />} />
             <Route path="/useId" element={<UseIdPage />} />
             <Route
               path="/useImperativeHandle"
               element={<UseImperativeHandlePage />}
             />
-            <Route
-              path="/useDeferredValue"
-              element={<UseDeferredValuePage />}
-            />
             <Route path="/useLayoutEffect" element={<UseLayoutEffectPage />} />
             <Route path="/useMemo" element={<UseMemoPage />} />
+            <Route path="/useOptimistic" element={<UseOptimisticPage />} />
             <Route path="/useReducer" element={<UseReducerPage />} />
             <Route path="/useRef" element={<UseRefPage />} />
             <Route path="/useState" element={<UseStatePage />} />
+            <Route
+              path="/useSyncExternalStore"
+              element={<UseSyncExternalStorePage />}
+            />
+            <Route path="/useTransition" element={<UseTransitionPage />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </main>
