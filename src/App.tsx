@@ -21,6 +21,7 @@ import UseLayoutEffectPage from "./hooks-examples/useLayoutEffect";
 import UseMemoPage from "./hooks-examples/useMemo";
 import UseReducerPage from "./hooks-examples/useReducer";
 import UseRefPage from "./hooks-examples/useRef";
+import UseStatePage from "./hooks-examples/useState";
 import { useEffect, useState } from "react";
 import "./App.css";
 
@@ -39,6 +40,7 @@ const HOOKS_LIST = [
   { id: "useMemo", name: "useMemo" },
   { id: "useReducer", name: "useReducer" },
   { id: "useRef", name: "useRef" },
+  { id: "useState", name: "useState" },
 ];
 
 function Navigation() {
@@ -102,6 +104,7 @@ function App() {
             <Route path="/useMemo" element={<UseMemoPage />} />
             <Route path="/useReducer" element={<UseReducerPage />} />
             <Route path="/useRef" element={<UseRefPage />} />
+            <Route path="/useState" element={<UseStatePage />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </main>
