@@ -18,6 +18,7 @@ import UseEffectPage from "./hooks-examples/useEffect";
 import UseIdPage from "./hooks-examples/useId";
 import UseImperativeHandlePage from "./hooks-examples/useImperativeHandle";
 import UseLayoutEffectPage from "./hooks-examples/useLayoutEffect";
+import UseMemoPage from "./hooks-examples/useMemo";
 import { useEffect, useState } from "react";
 import "./App.css";
 
@@ -33,6 +34,7 @@ const HOOKS_LIST = [
   { id: "useId", name: "useId" },
   { id: "useImperativeHandle", name: "useImperativeHandle" },
   { id: "useLayoutEffect", name: "useLayoutEffect" },
+  { id: "useMemo", name: "useMemo" },
 ];
 
 function Navigation() {
@@ -93,6 +95,7 @@ function App() {
               element={<UseDeferredValuePage />}
             />
             <Route path="/useLayoutEffect" element={<UseLayoutEffectPage />} />
+            <Route path="/useMemo" element={<UseMemoPage />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </main>
