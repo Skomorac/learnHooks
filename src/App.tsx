@@ -122,11 +122,46 @@ function App() {
 function Home() {
   return (
     <div className="home-hero">
-      <h2>Dobrodošli u Hook Trezor!</h2>
-      <p>
-        Izaberi hook iz dropdown menija iznad kako bi vidio teoriju, primjere i
-        "live" demo.
+      <div className="hero-badge">React 19 Ready</div>
+      <h2>Hook Trezor: Pokušaj da razumijemo kako rade React hooks</h2>
+
+      <p className="hero-subtitle">
+        Kompletna arhiva od <strong>16 React hooks</strong> obrađenih kroz
+        teoriju i praksu.
       </p>
+
+      <div className="hero-cards">
+        <div className="hero-card">
+          <h3>📝 Sažeta Teorija</h3>
+          <p>
+            Bez suvišnog teksta. Samo najbitnije definicije i "Key Points" koji
+            prave razliku u razumijevanju.
+          </p>
+        </div>
+
+        <div className="hero-card">
+          <h3>Interaktivni Demo</h3>
+          <p>
+            Svaki hook prati demo aplikacija. Nismo samo pisali kod, već smo
+            simulirali realne probleme (lag, memoriju, rendere).
+          </p>
+        </div>
+
+        <div className="hero-card">
+          <h3>💡 Best Practices</h3>
+          <p>
+            Savjeti zasnovani na vlastitom iskustvu – kada koristiti koji hook i
+            kako izbjeći uobičajene zamke.
+          </p>
+        </div>
+      </div>
+
+      <div className="hero-footer">
+        <p>
+          Izaberi hook iz dropdown menija iznad i istraži mehanizme koji pokreću
+          moderne React aplikacije.
+        </p>
+      </div>
     </div>
   );
 }
